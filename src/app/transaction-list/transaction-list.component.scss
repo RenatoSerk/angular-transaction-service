@@ -1,0 +1,16 @@
+table {
+    width: 100%;
+    padding: 50px;
+}
+
+.mat-header-cell {
+    background-color: rgb(230, 230, 230);
+    text-align: center !important;
+}
+
+mat-progress-spinner {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
