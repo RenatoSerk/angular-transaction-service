@@ -6,7 +6,7 @@
     <p>
         Date: {{this.transactionDetails.date.toLocaleString()}}
     </p>
-    <form (keyup.enter)="updateCommentAndClose()">
+    <form (keyup.enter)="updateCommentAndClose()" (keypress)="preventInvalidInput($event)">
         <mat-form-field appearance="fill">
             <mat-label>Comments</mat-label>
             <input matInput [(ngModel)]="commentValue" name="comment">

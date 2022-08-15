@@ -31,7 +31,7 @@ export class TransactionListComponent implements OnInit {
     dialogConfig.data = this.dataSource[selectedItemIndex];
     
     this.detailsDialog.open(TransactionDetailsComponent, dialogConfig).afterClosed().subscribe((newComment) => {
-      if (newComment && newComment !== this.dataSource[selectedItemIndex]?.comments){
+      if (newComment !== undefined && newComment !== this.dataSource[selectedItemIndex]?.comments){
         this.dataSource[selectedItemIndex].comments = newComment;
       }
     });

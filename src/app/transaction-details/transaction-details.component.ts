@@ -19,13 +19,21 @@ export class TransactionDetailsComponent implements OnDestroy {
     this.commentValue = this.transactionDetails.comments;
   }
 
-  ngOnDestroy(): void {
+  ngOnDestroy() {
     this._onDestroy.next();
     this._onDestroy.complete();
   }
 
-  updateCommentAndClose(){
+  updateCommentAndClose() {
     this.dialogRef.close(this.commentValue);
+  }
+
+  preventInvalidInput(event: KeyboardEvent) {
+    let inputCharacter = event.key;
+
+    if (!/[a-zA-Z0-9]/.test(inputCharacter)){
+      event.preventDefault();
+    }
   }
 
 }
