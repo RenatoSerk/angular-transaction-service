@@ -1,1 +1,15 @@
-<p>transaction-details works!</p>
+<mat-dialog-content>
+    <h1 mat-dialog-title>Transaction Details</h1>
+    <p>
+        ID: {{this.transactionDetails.id}}
+    </p>
+    <p>
+        Date: {{this.transactionDetails.date.toLocaleString()}}
+    </p>
+    <form (keyup.enter)="updateCommentAndClose()">
+        <mat-form-field appearance="fill">
+            <mat-label>Comments</mat-label>
+            <input matInput [(ngModel)]="commentValue" name="comment">
+        </mat-form-field>
+    </form>
+</mat-dialog-content>
