@@ -1,8 +1,9 @@
 # AngularTransactionService
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.2.  
+
 You can view a live version here, on Heroku  
-[https://angular-transaction.herokuapp.com/](https://angular-transaction.herokuapp.com/)
+[**https://angular-transaction.herokuapp.com/**](https://angular-transaction.herokuapp.com/)
 
 ## Development server
 
